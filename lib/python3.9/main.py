@@ -8,9 +8,8 @@ import json
 
 WEATHER_KEY="my_weather_key"
 WEATHER_URL="opendata.cwb.gov.tw/api"
-# response = requests.get(f"{WEATHER_URL}/v1/rest/datastore/F-C0032-001")
 #
-response=requests.get("https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-72EFCFC1-4EF5-4A47-AC7E-8F33110D0F1B&format=JSON")
+response=requests.get(f"https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization={WEATHER_KEY}&format=JSON")
 print(response)
 datas = response.json()
 #
